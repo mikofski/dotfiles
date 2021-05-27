@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 
 # SSH-AGENT
 SSH_ENV="$HOME/.ssh/environment"
