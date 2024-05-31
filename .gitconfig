@@ -15,22 +15,4 @@
 	ci = commit
 	st = status
 	br = branch
-	hist = log --pretty=format:\"%ad %C(yellow)%h%C(reset) %s%C(red)%d%C(reset) %C(cyan)[%an]%C(reset)\" --graph --date=short
-
-[credential]
-	helper = store
-[credential "https://gist.github.com"]
-	username = mikofski
-
-[core]
-	autocrlf = true
-
-[diff "jupyternotebook"]
-	command = git-nbdiffdriver diff
-[merge "jupyternotebook"]
-	driver = git-nbmergedriver merge %O %A %B %L %P
-	name = jupyter notebook merge driver
-[difftool "nbdime"]
-	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\"
-[mergetool "nbdime"]
-	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	hist = log --pretty=format:\"%ad %C(yellow bold)%h%C(reset) %s%C(red bold)%d%C(reset) %C(cyan bold)[%an]%C(reset)\" --graph --date=short
